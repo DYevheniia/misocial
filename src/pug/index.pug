@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/style.css")
+    body 
+        include components/mixin
+        header 
+            .wrapper 
+                +menu(mainMenu, light, true)
+                .header-bg
+                    .header-info
+                        p social marketing & analytics
+                        h2 Pricing Table
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+                    .arrow
+                        a(href="#")
+        
+        main 
+            .plan.wrapper
+                .plan-top
+                    p misocial
+                    h1 Select a Plan
+                    //-  about  MIsocial?
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+                .flex-between.cards
+                    +card (cardsInfo.satelite)
+                    +card (cardsInfo.mars)
+                    +card (cardsInfo.rocket)
+            .control 
+                .wrapper
+                    p socal marketing & analytics
+                    h2 Take control of your data
+                    .button-line.flex-between
+                        a(href="#") get started
+                        a(href="#") explore features
+        footer
+            .wrapper 
+                +menu(mainMenu, "dark", false)
+            hr
+            .flex-between.bottom-footer.wrapper
+                p © 2017 Mass Impressions & Tranmautritam. Make the right impression.
+                img(src="img/jjj.png", alt="jjj")
+        <script src="js/script.js"></script>
+    
+    

@@ -1,0 +1,23 @@
+=btn($fixed: true, $empty: false)
+
+    @if $fixed
+        max-width: 190rem
+        width: 100%
+        
+    @else
+        max-width: 150rem
+        border-radius: 25rem
+        width: 100%
+
+    @if $empty != false
+        border-radius: 25rem
+        background-color: #6e45e2
+        border: 1px solid #d7dbe8
+
+=media ($size)
+    @media screen and (min-width: #{$size}px)
+        @content
+
+=gradientBG ($url)
+    background-color: #87d3cd
+    background: linear-gradient(-60deg, rgba(135, 211, 205, .7) 40%, rgba(109, 69, 225, .7) 100%), url(#{$url}) top / cover
