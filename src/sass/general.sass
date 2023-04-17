@@ -80,8 +80,6 @@ header
 
 header
     .navigation
-        padding-top: 0
-        padding-bottom: 0
         position: fixed
         padding-left: 50rem
         padding-right: 50rem
@@ -100,11 +98,8 @@ header
 .navigation
     padding: 30rem 0
     align-items: center
-
-.main-menu
-    align-items: center
-.logo
-    align-items: center
+    .logo
+        align-items: center
     p.light,
     p.dark
         color: #fff
@@ -116,6 +111,10 @@ header
     p.dark
         color: #37374a
 
+.main-menu
+    align-items: center
+
+
 ul.light>li>a,
 ul.dark>li>a
     padding: 10rem 10rem
@@ -126,8 +125,10 @@ ul.dark>li>a
     line-height: 19rem
     border-bottom: 2rem solid transparent
     transition: .3s ease all
-    &:hover
-        border-bottom: 2rem solid #fff
+ul.light>li>a:hover
+    border-bottom: 2rem solid #fff
+ul.dark>li>a:hover
+    color: #756edc
 .sprite
     display: none
 ul.light,
@@ -184,6 +185,7 @@ a.light
     font-weight: 700
     +btn(false)
     &:hover
+        color: #fff
         background: #6e45e2
         filter: none
         border: 1rem solid #6e45e2
@@ -282,7 +284,7 @@ a.dark
             width: 2rem
             background-color: #9fa3af
         &:hover
-            background: rgba(0, 0, 0, .2)
+            filter: drop-shadow(0 0 10.5rem rgba(109, 69, 225,0.7))  
 div.plan
     padding-top: 110rem
     padding-bottom: 110rem
@@ -490,14 +492,17 @@ footer
     .navigation
         display: none
         +media(1110)
-        flex-wrap: wrap
-        justify-content: space-between
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
 
 a.dark        
     display: none
     +media(1110)
         display: inline-block
-    // :hover
+        &:hover
+            background: #756edc
+            
 
 .bottom-footer
     flex-wrap: wrap

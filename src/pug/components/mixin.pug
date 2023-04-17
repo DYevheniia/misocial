@@ -6,7 +6,7 @@
         ["Articles", "#"],
         ["Pricing", "#"],
     ]
-mixin menu(colorTheme="light", burger=false)
+mixin menu(mainMenu, colorTheme="light", burger=false)
     .navigation.flex-between
         .logo.flex-between
             picture
@@ -25,8 +25,7 @@ mixin menu(colorTheme="light", burger=false)
                 span(class=colorTheme).burger
                 span(class=colorTheme).burger 
                 span(class=colorTheme).burger 
-        else 
-            p no burger
+        
 
 -
     let cardsInfo = {

@@ -11,7 +11,7 @@ html(lang="en")
         include ../img/sprite.svg
         header 
             .wrapper 
-                +menu("light", true)
+                +menu(mainMenu, "light", true)
                 .header-bg
                     .header-info
                         p social marketing & analytics
@@ -48,14 +48,14 @@ html(lang="en")
                     svg.svg
                         a(href="#") 
                             use(xlink:href="#fb").use
-                    a(href="#") 
-                        svg.svg
+                    svg.svg
+                         a(href="#") 
                             use(xlink:href="#twitter").use
-                    a(href="#") 
-                        svg.svg
+                    svg.svg
+                        a(href="#") 
                             use(xlink:href="#google").use
-                    a(href="#") 
-                        svg.svg
+                    svg.svg
+                        a(href="#") 
                             use(xlink:href="#instagram").use
                 
         <script src="js/script.js"></script>
