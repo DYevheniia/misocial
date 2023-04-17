@@ -8,21 +8,22 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.css")
     body 
         include components/mixin
+        include ../img/sprite.svg
         header 
             .wrapper 
-                +menu(mainMenu, light, true)
+                +menu("light", true)
                 .header-bg
                     .header-info
                         p social marketing & analytics
                         h2 Pricing Table
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
                     .arrow
-                        a(href="#")
+                        a(href="#select")
         
         main 
             .plan.wrapper
                 .plan-top
-                    p misocial
+                    p#select misocial
                     h1 Select a Plan
                     //-  about  MIsocial?
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
@@ -40,10 +41,23 @@ html(lang="en")
         footer
             .wrapper 
                 +menu(mainMenu, "dark", false)
-            hr
+                hr
             .flex-between.bottom-footer.wrapper
                 p © 2017 Mass Impressions & Tranmautritam. Make the right impression.
-                img(src="img/jjj.png", alt="jjj")
+                .social
+                    svg.svg
+                        a(href="#") 
+                            use(xlink:href="#fb").use
+                    a(href="#") 
+                        svg.svg
+                            use(xlink:href="#twitter").use
+                    a(href="#") 
+                        svg.svg
+                            use(xlink:href="#google").use
+                    a(href="#") 
+                        svg.svg
+                            use(xlink:href="#instagram").use
+                
         <script src="js/script.js"></script>
     
     

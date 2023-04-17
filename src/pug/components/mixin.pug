@@ -6,11 +6,10 @@
         ["Articles", "#"],
         ["Pricing", "#"],
     ]
-mixin menu(mainMenu, colorTheme="light", burger=false)
+mixin menu(colorTheme="light", burger=false)
     .navigation.flex-between
         .logo.flex-between
             picture
-                source(srcset="img/logo.svg", type="image/svg")
                 source(srcset="img/logo.webp", type="image/webp")
                 img(src="img/logo.png", alt="")
             p(class=colorTheme) misocial
@@ -20,12 +19,14 @@ mixin menu(mainMenu, colorTheme="light", burger=false)
                 for item in mainMenu  
                     li 
                         a(href=item[1]) #{item[0]}
-        a(href="#", class=colorTheme) get started
-        if burger
-            .burger-menu#burger
-                span.burger
-                span.burger 
-                span.burger 
+            a(href="#", class=colorTheme) get started
+        if colorTheme == "light"
+            .burger-menu(class=colorTheme, id="burger")
+                span(class=colorTheme).burger
+                span(class=colorTheme).burger 
+                span(class=colorTheme).burger 
+        else 
+            p no burger
 
 -
     let cardsInfo = {
