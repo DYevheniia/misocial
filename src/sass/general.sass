@@ -132,6 +132,8 @@ header
 .main-menu
     align-items: center
 
+    ul.light>li
+        margin-left: 10rem
 
 ul.light>li>a,
 ul.dark>li>a
@@ -145,6 +147,7 @@ ul.dark>li>a
     border-bottom: 2rem solid transparent
     transition: .3s ease all
     +media(1110)
+    display: inline-block
         padding: 10rem 10rem
 ul.light>li>a:hover
     border-bottom: 2rem solid #fff
