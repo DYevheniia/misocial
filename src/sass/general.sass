@@ -138,18 +138,38 @@ header
 
 ul.light>li>a,
 ul.dark>li>a
+    position: relative
     display: inline-block
     color: #fff
     font-size: 16rem
     font-weight: 500
     text-decoration: none
     line-height: 19rem
-    border-bottom: 2rem solid transparent
     transition: .3s ease all
     +media(1110)
         padding: 10rem 10rem
-ul.light>li>a:hover
-    border-bottom: 2rem solid #fff
+ul.light a:hover::before
+        content: ''
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        height: 2rem
+        background: #fff
+        animation: border 1s linear  normal 1 backwards
+        @keyframes border
+            0%
+                height: 2rem
+            50%
+                height: 5rem
+                transform: scale(1.2)
+            100%
+                height: 2rem
+                
+                
+
+// ul.light>li>a:hover
+//     border-bottom: 2rem solid #fff
 ul.dark>li>a:hover
     color: #756edc
 .sprite
