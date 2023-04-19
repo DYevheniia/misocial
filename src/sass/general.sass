@@ -14,7 +14,6 @@ html
 body
     margin: 0
     font-family: "Maven Pro"
-    transition: .3s ease all
 
 header
     +gradientBG ("../img/main-bg.jpg")
@@ -55,9 +54,11 @@ header
     height: 100%
     fill: #b4b4bb
 
-
+.burger
+    transition: .3s ease all
 .burger-menu
     display: block
+    cursor: pointer
     +media(1110)
         display: none
     span.light
@@ -95,7 +96,7 @@ header
     display: flex
     justify-content: space-between
     column-gap: 15rem
-    row-gap: 15rem
+    row-gap: 35rem
 
 header
     .navigation
@@ -147,7 +148,7 @@ ul.dark>li>a
     border-bottom: 2rem solid transparent
     transition: .3s ease all
     +media(1110)
-        display: inline-block
+        width: none
         padding: 10rem 10rem
 ul.light>li>a:hover
     border-bottom: 2rem solid #fff
@@ -366,7 +367,7 @@ div.plan
 .cards
     flex-wrap: wrap
     text-align: center 
-    row-gap: 20rem
+    row-gap: 50rem
     column-gap: 20rem
     +media(1080)
         flex-wrap: nowrap
